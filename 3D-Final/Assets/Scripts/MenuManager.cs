@@ -22,6 +22,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     [Header("Main Menu")]
     public Button createRoomBtn;
     public Button joinRoomBtn;
+    public Button MenuButton;
     public TMP_Text usernameTag;
 
     private void Start()
@@ -30,7 +31,12 @@ public class MenuManager : MonoBehaviourPunCallbacks
         {
             createRoomBtn.interactable = false;
             joinRoomBtn.interactable = false;
-        } 
+        }
+
+        MenuButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(Scenes.MenuScene.ToString());
+        });
     }
 
     private void Update()
