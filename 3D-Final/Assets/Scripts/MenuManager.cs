@@ -27,11 +27,11 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        if (createRoomBtn != null && joinRoomBtn != null)
-        {
-            createRoomBtn.interactable = false;
-            joinRoomBtn.interactable = false;
-        }
+        //if (createRoomBtn != null && joinRoomBtn != null)
+        //{
+        //    createRoomBtn.interactable = false;
+        //    joinRoomBtn.interactable = false;
+        //}
 
         MenuButton.onClick.AddListener(() =>
         {
