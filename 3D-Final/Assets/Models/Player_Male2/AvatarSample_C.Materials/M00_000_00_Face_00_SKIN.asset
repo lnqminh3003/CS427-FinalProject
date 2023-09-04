@@ -18,8 +18,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -68,7 +67,7 @@ Material:
     m_Floats:
     - _CutOff: 0.5
     - _OutlineWidth: 0.12228456
-    - _QueueControl: -1
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _ShadeShift: -0.9
     - _ShadeToony: 0

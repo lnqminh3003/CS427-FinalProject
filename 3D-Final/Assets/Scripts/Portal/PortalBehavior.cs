@@ -29,9 +29,11 @@ public class PortalBehavior : MonoBehaviourPunCallbacks
     {
         if (other.CompareTag("Player") && !startedGame)
         {
+            Debug.Log("11111");
             if (!photonView.IsMine) return;
             if (other.GetComponentInParent<ThirdPersonMovement>().isMasterClient && ValidGameState())
             {
+                Debug.Log("11111");
                 string announcement = "";
                 switch(portalType)
                 {

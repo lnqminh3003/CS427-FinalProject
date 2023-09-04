@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Core/Scenes/IntroScene.unity
     guid: 09eb7193f3b74fa4f893138674e54219
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Core/Scenes/Lobby.unity
     guid: 6ccc26529877edd44b64c31fb28f637b
   - enabled: 1
     path: Assets/Scenes/Survival.unity
