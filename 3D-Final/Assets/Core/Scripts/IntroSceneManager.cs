@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroSceneManager : MonoBehaviour
 {
@@ -22,8 +23,15 @@ public class IntroSceneManager : MonoBehaviour
     public GameObject b4;
     public GameObject b5;
 
+    public Button skipBtn;
+
     private void Start()
     {
+        skipBtn.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.GetComponent<AudioSource>().Play();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(Scenes.NewMain.ToString());
+        });
         AudioManager.Instance.GetComponent<AudioSource>().Stop();
         StartCoroutine(IntroVideo());
     }
@@ -40,20 +48,12 @@ public class IntroSceneManager : MonoBehaviour
         yield return new WaitForSeconds(at);
         a.SetActive(false);
         b.SetActive(true);
-        b1.SetActive(false);
-        b2.SetActive(false);
-        b3.SetActive(false);
-        b4.SetActive(false);
-        b5.SetActive(false);
-        yield return new WaitForSeconds(bt);
-        a.SetActive(false);
-        b.SetActive(true);
         b1.SetActive(true);
         b2.SetActive(false);
         b3.SetActive(false);
         b4.SetActive(false);
         b5.SetActive(false);
-        yield return new WaitForSeconds(bt1);
+        yield return new WaitForSeconds(bt);
         a.SetActive(false);
         b.SetActive(true);
         b1.SetActive(false);
